@@ -1,0 +1,308 @@
+/* ======== Global ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #333;
+}
+
+/* ======== Header ======== */
+header {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: #fff;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.logo span {
+  color: #ffcc00;
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* ======== Hero Section ======== */
+#hero {
+  background: linear-gradient(120deg, #6366f1, #a855f7);
+  color: #fff;
+  text-align: center;
+  padding: 5em 1em;
+  animation: fadeIn 2s ease;
+}
+.hero-content h2 {
+  font-size: 2em;
+}
+.hero-content span {
+  color: #ffcc00;
+}
+.hero-content p {
+  margin-top: 0.5em;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1em;
+  background: #ffcc00;
+  color: #333;
+  padding: 0.6em 1.2em;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #fff;
+  color: #4f46e5;
+}
+
+.btn-cv {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #ffcc00;
+  margin-left: 10px;
+}
+
+.btn-cv:hover {
+  background: #ffcc00;
+  color: #333;
+}
+
+
+/* ======== Tentang Saya ======== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  padding: 3em 2em;
+}
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid #9333ea;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.about-img:hover {
+  transform: scale(1.05);
+}
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+.about-text h2 {
+  color: #4f46e5;
+  margin-bottom: 1em;
+  text-align: left;
+}
+.about-text p {
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* ======== Portofolio ======== */
+.section {
+  text-align: center;
+  padding: 3em 2em;
+}
+.section h2 {
+  color: #4f46e5;
+  margin-bottom: 1em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+.card {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(186, 37, 37, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.card h3 {
+  color: #9333ea;
+  margin-bottom: 0.5em;
+}
+/* ======== Portofolio (Dark Style seperti gambar) ======== */
+#portofolio {
+  background: radial-gradient(circle at top left, #ffffff, #ffffff); /* tetap putih */
+  color: #4b0082; /* warna teks default ungu tua */
+}
+
+#portofolio h2 {
+  color: #6b21a8; /* ungu elegan */
+  margin-bottom: 2em;
+  font-size: 1.8em;
+  text-shadow: 0 0 8px rgba(107, 33, 168, 0.2); /* glow lembut */
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+  width: 90%;
+  margin: auto;
+}
+
+.portfolio-card {
+  border: 1px solid rgba(107, 33, 168, 0.4); /* ungu lembut */
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(107, 33, 168, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(107, 33, 168, 0.3);
+}
+
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(107, 33, 168, 0.2);
+}
+
+.card-content {
+  padding: 1.2em;
+  text-align: left;
+}
+
+.card-content h3 {
+  color: #7e22ce; /* ungu medium */
+  margin-bottom: 0.5em;
+}
+
+.card-content p {
+  color: #333;
+  font-size: 0.95em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.card-tags span {
+  background: rgba(126, 34, 206, 0.1);
+  color: #7e22ce;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-tags span:hover {
+  background: #7e22ce;
+  color: #fff;
+}
+
+.card-footer {
+  margin-top: 1em;
+  color: #6b21a8;
+  font-size: 0.85em;
+}
+
+
+
+/* ======== Skills ======== */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+.skills li {
+  background: #4f46e5;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.skills li:hover {
+  background: #ffcc00;
+  color: #000000;
+}
+
+/* ======== Footer ======== */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+/* ======== Animasi ======== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== Responsif ======== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
